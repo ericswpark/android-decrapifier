@@ -6,6 +6,10 @@ Thanks to XDA and Reddit users that found the ADB remove/disable commands!
 
 ## Usage
 
+Download the latest release and run:
+
+    java -jar android_decrapifier.jar
+
 Refer to the example package lists in `example/`.
 
 Force delete means the package should be removed, not disabled. It is best to leave this as false, unless your device re-enables those packages periodically. If this happens, set the force deletion option to true.
