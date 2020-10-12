@@ -10,7 +10,7 @@ Force delete means the package should be removed, not disabled. It is best to le
 
 ## FAQ
 
-Q: How do I re-enable packages?
+### Q: How do I re-enable packages?
 
 A: Run
 
@@ -18,3 +18,6 @@ A: Run
 
 Note that this is not possible for packages that were force-deleted. If you want to restore these, factory reset your device.
 
+### Q: Some packages give me a failure result. Why?
+
+A: While testing, I've found that Android Lollipop (or older) devices only support removing apps, not disabling them. If this is the case, try changing force delete to true.
