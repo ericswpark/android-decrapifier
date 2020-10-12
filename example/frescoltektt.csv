@@ -1,0 +1,26 @@
+Package Identifier,Force Delete,Description
+com.vlingo.midas,FALSE,S Voice
+com.samsung.android.app.storyalbumwidget,FALSE,Story Album Widget
+sstream.app,FALSE,My Magazine
+com.android.ahnmobilesecurity,FALSE,V3 Mobile 2.0
+com.ktmusic.geniemusic,FALSE,Genie Music
+flipboard.app,FALSE,Flipboard
+com.sec.android.widgetapp.ap.yonhapnews,FALSE,Yonhap News
+com.dropbox.android,FALSE,Dropbox
+com.google.android.apps.plus,FALSE,Google Currents (Google Plus)
+com.samsung.android.sm,FALSE,Smart Manager
+com.sec.android.app.anycallservicecenter,FALSE,Samsung Service
+com.tripadvisor.tripadvisor,FALSE,Tripadvisor
+com.sec.android.widgetapp.ap.samsungpop.stockclock,FALSE,Samsung Securities
+com.kt.nfc.mgr,FALSE,KT MoCa Tree (NFC wallet app)
+com.adsk.sketchbookhd.galaxy.oem,FALSE,SketchBook for Galaxy
+com.cleanmaster.sdk,FALSE,Cheetah Mobile CleanMaster SDK (!)
+com.kt.wificm,FALSE,KT WiFi Manager
+com.kt.otv,FALSE,KT TV Mobile
+com.sec.penup,FALSE,PEN.UP
+com.evernote,FALSE,Evernote
+com.google.android.talk,FALSE,Google Hangouts
+com.diotek.diodict4.Edictionary,FALSE,Dictionary (DioDict4)
+com.sec.chaton,FALSE,Samsung ChatOn (discontinued)
+com.samsung.groupcast,FALSE,Group Play (dead)
+com.sec.android.app.translator,FALSE,S Translator (dead)
