@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Android Decrapifier");
-        System.out.print("What package list would you like to use? (e.g. frescoltektt.csv) ");
+        System.out.print("What package list would you like to use? (e.g. example/frescoltektt.csv) ");
 
         Scanner scanner = new Scanner(System.in);
         String packageListDirectory = scanner.nextLine();
@@ -52,24 +52,38 @@ public class Main {
             }
         }
 
-        // Start deletion process
-        for (AndroidPackage androidPackage : androidPackages) {
-            boolean result = false;
-            if (!androidPackage.isForceDelete()) {
-                result = disablePackage(androidPackage.getPackageIdentifier());
-            } else {
-                result = removePackage(androidPackage.getPackageIdentifier());
+        // Ask before starting
+        System.out.printf("Found %d packages to disable/remove. Start? (y/n) ", androidPackages.size());
+        String startConfirm = scanner.nextLine();
+        if(startConfirm.toUpperCase().equals("Y")) {
+            // Start deletion process
+            int success = 0;
+            int failure = 0;
+
+            for (AndroidPackage androidPackage : androidPackages) {
+                boolean result = false;
+                if (!androidPackage.isForceDelete()) {
+                    result = disablePackage(androidPackage.getPackageIdentifier());
+                } else {
+                    result = removePackage(androidPackage.getPackageIdentifier());
+                }
+
+                if (result) {
+                    System.out.printf("%s - successfully disabled/removed!%n", androidPackage.getPackageIdentifier());
+                    success++;
+                } else {
+                    System.out.printf("%s - failed to disable/remove. It may be deleted/disabled already.%n",
+                            androidPackage.getPackageIdentifier());
+                    failure++;
+                }
             }
 
-            if(result) {
-                System.out.printf("%s - successfully disabled/removed!", androidPackage.getPackageIdentifier());
-            } else {
-                System.out.printf("%s - failed to disable/remove. It may be deleted/disabled already.",
-                        androidPackage.getPackageIdentifier());
-            }
+            System.out.printf("Finished! Successfully disabled/removed %d packages, failed %d, total %d%n", success,
+                    failure, androidPackages.size());
+        } else {
+            System.out.println("OK, deletion canceled.");
+            System.out.println("The program will now exit.");
         }
-
-
     }
 
     private static boolean disablePackage(String packageName) {
@@ -82,7 +96,7 @@ public class Main {
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String response = reader.readLine();
 
-            if(response.equals(String.format("Package %s new state: disabled-user", packageName)))
+            if(response != null && response.equals(String.format("Package %s new state: disabled-user", packageName)))
                 return true;
 
             reader.close();
