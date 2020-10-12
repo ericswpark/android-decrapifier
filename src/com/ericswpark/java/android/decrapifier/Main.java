@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Android Decrapifier");
-        System.out.print("What package list would you like to use? (e.g. example/frescoltektt.csv) ");
+        System.out.print("What package list would you like to use? (format: codename.csv) ");
 
         Scanner scanner = new Scanner(System.in);
         String packageListDirectory = scanner.nextLine();
