@@ -28,6 +28,10 @@ Note that this is not possible for packages that were force-deleted. If you want
 
 A: While testing, I've found that Android Lollipop (or older) devices only support removing apps, not disabling them. If this is the case, try changing force delete to true.
 
+### Q: After running, some apps still remain. Why?
+
+Some apps have updates applied on top (such as stub apps from Tripadvisor or Flipboard). These apps require multiple runs to be deleted completely. Try running the removal program again until the app goes away completely.
+
 ### Q: Can you add support for my device too?
 
 A: Make a .csv file (look at the example) and submit a pull request!
