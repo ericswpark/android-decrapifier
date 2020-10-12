@@ -6,11 +6,11 @@ Thanks to XDA and Reddit users that found the ADB remove/disable commands!
 
 ## Usage
 
-Download the latest release and run:
+[Download the latest release](https://github.com/ericswpark/android-decrapifier/releases) and run:
 
     java -jar android_decrapifier.jar
 
-Refer to the example package lists in `example/`.
+Refer to the example package lists in `example/`. There are a couple of pre-made package lists that you may want to use. If there is no pre-made package list for your device, create your own CSV following the format from the example directory.
 
 Force delete means the package should be removed, not disabled. It is best to leave this as false, unless your device re-enables those packages periodically. If this happens, set the force deletion option to true.
 
