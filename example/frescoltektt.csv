@@ -1,27 +1,27 @@
 Package Identifier,Force Delete,Description
-com.vlingo.midas,TRUE,S Voice
-com.samsung.android.app.storyalbumwidget,TRUE,Story Album Widget
-sstream.app,TRUE,My Magazine
-com.android.ahnmobilesecurity,TRUE,V3 Mobile 2.0
-com.ktmusic.geniemusic,TRUE,Genie Music
-flipboard.app,TRUE,Flipboard
-com.sec.android.widgetapp.ap.yonhapnews,TRUE,Yonhap News
-com.dropbox.android,TRUE,Dropbox
-com.google.android.apps.plus,TRUE,Google Currents (Google Plus)
-com.samsung.android.sm,TRUE,Smart Manager
-com.sec.android.app.anycallservicecenter,TRUE,Samsung Service
-com.tripadvisor.tripadvisor,TRUE,Tripadvisor
-com.sec.android.widgetapp.ap.samsungpop.stockclock,TRUE,Samsung Securities
-com.kt.nfc.mgr,TRUE,KT MoCa Tree (NFC wallet app)
-com.adsk.sketchbookhd.galaxy.oem,TRUE,SketchBook for Galaxy
-com.cleanmaster.sdk,TRUE,Cheetah Mobile CleanMaster SDK (!)
-com.kt.wificm,TRUE,KT WiFi Manager
-com.kt.otv,TRUE,KT TV Mobile
-com.sec.penup,TRUE,PEN.UP
-com.evernote,TRUE,Evernote
-com.google.android.talk,TRUE,Google Hangouts
-com.diotek.diodict4.EDictionary,TRUE,Dictionary (DioDict4)
-com.sec.chaton,TRUE,Samsung ChatOn (discontinued)
-com.samsung.groupcast,TRUE,Group Play (dead)
-com.sec.android.app.translator,TRUE,S Translator (dead)
-com.samsung.android.app.episoders,TRUE,Story Album
+com.vlingo.midas,true,S Voice
+com.samsung.android.app.storyalbumwidget,true,Story Album Widget
+sstream.app,true,My Magazine
+com.android.ahnmobilesecurity,true,V3 Mobile 2.0
+com.ktmusic.geniemusic,true,Genie Music
+flipboard.app,true,Flipboard
+com.sec.android.widgetapp.ap.yonhapnews,true,Yonhap News
+com.dropbox.android,true,Dropbox
+com.google.android.apps.plus,true,Google Currents (Google Plus)
+com.samsung.android.sm,true,Smart Manager
+com.sec.android.app.anycallservicecenter,true,Samsung Service
+com.tripadvisor.tripadvisor,true,Tripadvisor
+com.sec.android.widgetapp.ap.samsungpop.stockclock,true,Samsung Securities
+com.kt.nfc.mgr,true,KT MoCa Tree (NFC wallet app)
+com.adsk.sketchbookhd.galaxy.oem,true,SketchBook for Galaxy
+com.cleanmaster.sdk,true,Cheetah Mobile CleanMaster SDK (!)
+com.kt.wificm,true,KT WiFi Manager
+com.kt.otv,true,KT TV Mobile
+com.sec.penup,true,PEN.UP
+com.evernote,true,Evernote
+com.google.android.talk,true,Google Hangouts
+com.diotek.diodict4.EDictionary,true,Dictionary (DioDict4)
+com.sec.chaton,true,Samsung ChatOn (discontinued)
+com.samsung.groupcast,true,Group Play (dead)
+com.sec.android.app.translator,true,S Translator (dead)
+com.samsung.android.app.episoders,true,Story Album
