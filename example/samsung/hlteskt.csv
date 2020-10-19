@@ -1,0 +1,53 @@
+Package Identifier,Force Delete,Description
+com.samsung.android.app.episodes,true,Story Album
+com.tripadvisor.tripadvisor,true,Tripadvisor
+com.cleanmaster.sdk,true,Cheetah Mobile CleanMaster SDK (!)
+com.sec.android.app.translator,true,S Translator (dead)
+com.diotek.diodict4.EDictionary,true,Dictionary (DioDict4)
+com.vlingo.midas,true,S Voice
+com.adsk.sketchbookhd.galaxy.oem,true,SketchBook for Galaxy
+com.samsung.android.app.storyalbumwidget,true,Story Album Widget
+com.samsung.android.sm,true,Smart Manager
+com.samsung.groupcast,true,Group Play (dead)
+com.sec.android.swingo,true,Swingo (dead)
+com.sec.pcw,true,Samsung Link
+sstream.app,true,My Magazine
+com.sec.everglades,true,Samsung Hub (dead)
+com.skt.RDiagno,true,SKT Diagnosis
+com.rsupport.engine.screen,true,SKT Diagnosis (2)
+com.sec.everglades.update,true,Samsung Hub Updater
+kr.iskra.android.samsungshop,true,Samsung Shop (Shopconnect)
+com.tms,true,T Membership
+com.android.ahnmobilesecurity,true,V3 Mobile 2.0
+com.skt.RInstallAgent,true,SKT Remote Access
+com.samsung.android.sdk.samsunglink,true,Samsung Link Platform
+com.infraware.polarisviewer5,true,POLARIS Office Viewer 5
+com.nate.android.portalmini,true,Nate
+com.btb.minihompy,true,Cyworld
+com.skt.skaf.OA00026910,true,Syrup Wallet
+com.sec.android.widgetapp.ap.samsungpop.stockclock,true,Samsung Securities
+com.skt.tmaphot,true,Syrup Table
+com.sec.penup,true,PEN.UP
+Uxpp.UC,true,NateOn
+com.skmnc.gifticon,true,Gifticon
+com.skmc.okcashbag.home_google,true,OK Cashbag
+com.ubivelox.mc.activity,true,Samsung Finances POP
+com.google.android.apps.plus,true,Google Currents (Google Plus)
+com.evernote,true,Evernote
+flipboard.app,true,Flipboard
+com.skplanet.nfc.smarttouch,true,SKT Smart Touch
+com.sec.kidsplat.installer,true,Kids Mode
+com.elevenst,true,11st
+com.sec.android.widgetapp.ap.yonhapnews,true,Yonhap News
+com.sec.msc.nts.android.proxy,true,Samsung Link Platform Connectivity
+com.sec.chaton,true,Samsung ChatOn (discontinued)
+com.cyworld.camera,true,Cymera
+com.skb.btvmobile,true,oksusu
+com.sec.android.cloudagent.dropboxoobe,true,Dropbox OOBE
+tv.peel.samsung.app,true,WatchON (malicious)
+com.iloen.melon,true,Melon
+com.samsung.helphub,true,Samsung Help
+com.rsupport.engine.input2,true,SKT Diagnosis (Service)
+com.sec.android.app.anycallservicecenter,true,Samsung Service\
+com.dropbox.android,true,Dropbox
+com.google.android.talk,true,Google Hangouts
