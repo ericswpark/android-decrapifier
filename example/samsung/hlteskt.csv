@@ -51,3 +51,8 @@ com.rsupport.engine.input2,true,SKT Diagnosis (Service)
 com.sec.android.app.anycallservicecenter,true,Samsung Service\
 com.dropbox.android,true,Dropbox
 com.google.android.talk,true,Google Hangouts
+com.moent.vas,true,T Call Manager
+com.skt.tservice,true,T Service
+com.skp.tcloud.agent,true,T Cloud Agent
+com.skt.tbagplus,true,T Cloud
+com.sec.app.samsungprintservice,true,Samsung Print Service Plugin
