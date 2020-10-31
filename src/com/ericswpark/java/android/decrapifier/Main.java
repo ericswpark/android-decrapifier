@@ -17,7 +17,38 @@ public class Main {
         String packageListDirectory = scanner.nextLine();
 
         readFile(packageListDirectory);
-        
+        processPackages(scanner);
+    }
+
+    private static void readFile(String filename) {
+        try (FileReader fileReader = new FileReader(filename);
+             BufferedReader bufferedReader = new BufferedReader(fileReader)){
+
+            String line = "";
+            // Skip CSV 1st line
+            bufferedReader.readLine();
+
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] rawInput = line.split(DELIMITER);
+
+                if(rawInput.length > 0) {
+                    AndroidPackage androidPackage = new AndroidPackage(rawInput[0], Boolean.parseBoolean(rawInput[1]),
+                            rawInput[2]);
+                    androidPackages.add(androidPackage);
+                }
+            }
+        } catch (FileNotFoundException fileNotFoundException) {
+            System.out.println("Error: the specified package list file does not exist!");
+            System.out.println("The program will now exit.");
+            System.exit(1);
+        } catch (IOException ioException) {
+            System.out.println("Error: the file could not be read.");
+            System.out.println("The program will now exit.");
+            System.exit(1);
+        }
+    }
+
+    private static void processPackages(Scanner scanner) {
         // Ask before starting
         System.out.printf("Found %d packages to disable/remove. Start? (y/n) ", androidPackages.size());
         String startConfirm = scanner.nextLine();
@@ -49,34 +80,7 @@ public class Main {
         } else {
             System.out.println("OK, deletion canceled.");
             System.out.println("The program will now exit.");
-        }
-    }
-
-    private static void readFile(String filename) {
-        try (FileReader fileReader = new FileReader(filename);
-             BufferedReader bufferedReader = new BufferedReader(fileReader)){
-
-            String line = "";
-            // Skip CSV 1st line
-            bufferedReader.readLine();
-
-            while ((line = bufferedReader.readLine()) != null) {
-                String[] rawInput = line.split(DELIMITER);
-
-                if(rawInput.length > 0) {
-                    AndroidPackage androidPackage = new AndroidPackage(rawInput[0], Boolean.parseBoolean(rawInput[1]),
-                            rawInput[2]);
-                    androidPackages.add(androidPackage);
-                }
-            }
-        } catch (FileNotFoundException fileNotFoundException) {
-            System.out.println("Error: the specified package list file does not exist!");
-            System.out.println("The program will now exit.");
-            System.exit(1);
-        } catch (IOException ioException) {
-            System.out.println("Error: the file could not be read.");
-            System.out.println("The program will now exit.");
-            System.exit(1);
+            System.exit(0);
         }
     }
 
