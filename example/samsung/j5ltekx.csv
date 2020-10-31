@@ -1,0 +1,11 @@
+Package Identifier,Force Delete,Description
+com.cleanmaster.sdk,true,Cheetah Mobile CleanMaster SDK (!)
+com.samsung.android.sm,true,Smart Manager
+com.google.android.talk,true,Google Hangouts
+com.sec.msc.nts.android.proxy,true,Samsung Link Platform Connectivity
+com.sec.android.app.sbrowser,true,Samsung Internet
+com.samsung.android.email.widget,true,Email widget
+com.samsung.android.email.ui,true,Email
+com.samsung.android.email.composer,true,Email composer
+com.samsung.android.email.sync,true,Email sync
+com.samsung.android.email.provider,true,Email storage
