@@ -11,7 +11,6 @@ public class Main {
     private static ArrayList<AndroidPackage> androidPackages = new ArrayList<>();
 
     public static void main(String[] args) {
-        System.out.println("Android Decrapifier");
         System.out.print("What package list would you like to use? (format: codename.csv) ");
 
         Scanner scanner = new Scanner(System.in);
