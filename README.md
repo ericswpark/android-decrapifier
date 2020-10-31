@@ -10,6 +10,12 @@ Thanks to XDA and Reddit users that found the ADB remove/disable commands!
 
     java -jar android_decrapifier.jar
 
+Or, use auto-run (must be run at the root of this repository):
+
+    java -jar android_decrapifier.jar -a
+
+Auto-run will grab the device information using ADB and then try and find the corresponding bloatware list from the example directory. If it does not exist it will throw an error and exit. For auto-run to succeed, you should clone the entire repo instead of just downloading the JAR file.
+
 Refer to the example package lists in `example/`. There are a couple of pre-made package lists that you may want to use. If there is no pre-made package list for your device, create your own CSV following the format from the example directory.
 
 Force delete means the package should be removed, not disabled. It is best to leave this as false, unless your device re-enables those packages periodically. If this happens, set the force deletion option to true.
