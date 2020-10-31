@@ -8,6 +8,8 @@ public class Main {
 
     private static final String DELIMITER = ",";
 
+    private static ArrayList<AndroidPackage> androidPackages = new ArrayList<>();
+
     public static void main(String[] args) {
         System.out.println("Android Decrapifier");
         System.out.print("What package list would you like to use? (format: codename.csv) ");
@@ -15,11 +17,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String packageListDirectory = scanner.nextLine();
 
-        BufferedReader bufferedReader = null;
-        ArrayList<AndroidPackage> androidPackages = new ArrayList<>();
-
-        try {
-            bufferedReader = new BufferedReader(new FileReader(packageListDirectory));
+        try (FileReader fileReader = new FileReader(packageListDirectory);
+             BufferedReader bufferedReader = new BufferedReader(fileReader)){
 
             String line = "";
             // Skip CSV 1st line
@@ -34,8 +33,6 @@ public class Main {
                     androidPackages.add(androidPackage);
                 }
             }
-
-            bufferedReader.close();
         } catch (FileNotFoundException fileNotFoundException) {
             System.out.println("Error: the specified package list file does not exist!");
             System.out.println("The program will now exit.");
@@ -44,12 +41,6 @@ public class Main {
             System.out.println("Error: the file could not be read.");
             System.out.println("The program will now exit.");
             System.exit(1);
-        } finally {
-            try {
-                bufferedReader.close();
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
         }
 
         // Ask before starting
