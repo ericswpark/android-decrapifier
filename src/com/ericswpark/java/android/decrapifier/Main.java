@@ -9,15 +9,16 @@ public class Main {
     private static final String DELIMITER = ",";
 
     private static ArrayList<AndroidPackage> androidPackages = new ArrayList<>();
+    private static Scanner scanner;
 
     public static void main(String[] args) {
+        scanner = new Scanner(System.in);
         System.out.print("What package list would you like to use? (format: codename.csv) ");
 
-        Scanner scanner = new Scanner(System.in);
         String packageListDirectory = scanner.nextLine();
 
         readFile(packageListDirectory);
-        processPackages(scanner);
+        processPackages();
     }
 
     private static void readFile(String filename) {
@@ -48,7 +49,7 @@ public class Main {
         }
     }
 
-    private static void processPackages(Scanner scanner) {
+    private static void processPackages() {
         // Ask before starting
         System.out.printf("Found %d packages to disable/remove. Start? (y/n) ", androidPackages.size());
         String startConfirm = scanner.nextLine();
