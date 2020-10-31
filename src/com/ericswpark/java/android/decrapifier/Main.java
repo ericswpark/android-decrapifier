@@ -2,6 +2,7 @@ package com.ericswpark.java.android.decrapifier;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -13,11 +14,23 @@ public class Main {
 
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
-        System.out.print("What package list would you like to use? (format: codename.csv) ");
+        String packageListFile = null;
 
-        String packageListDirectory = scanner.nextLine();
+        if (args.length == 0) {
+            System.out.print("What package list would you like to use? (format: codename.csv) ");
+            packageListFile = scanner.nextLine();
+        } else {
+            if (args[0].equals("-a")) {
+                // Try automatic detection
+                packageListFile = autoDetectDevice();
+            } else {
+                System.out.println("Invalid arguments.");
+                System.exit(1);
+            }
+        }
 
-        readFile(packageListDirectory);
+        Objects.requireNonNull(packageListFile);
+        readFile(packageListFile);
         processPackages();
     }
 
@@ -47,6 +60,43 @@ public class Main {
             System.out.println("The program will now exit.");
             System.exit(1);
         }
+    }
+
+    private static String autoDetectDevice() {
+        System.out.println("Detecting device using ADB...");
+
+        // Get device manufacturer
+        String[] command = {"adb", "shell", "getprop", "ro.product.brand"};
+        String manufacturer = runCommand(command);
+        Objects.requireNonNull(manufacturer);
+
+        // Get device codename
+        // Both ro.product.device and ro.product.name return the codename
+        command = new String[]{"adb", "shell", "getprop", "ro.product.device"};
+        String codename = runCommand(command);
+        Objects.requireNonNull(codename);
+
+        System.out.printf("Detected device %s/%s.%n", manufacturer, codename);
+
+        return String.format("example/%s/%s.csv", manufacturer, codename);
+    }
+
+    private static String runCommand(String[] command) {
+        Runtime runtime = Runtime.getRuntime();
+
+        try {
+            Process process = runtime.exec(command);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String response = reader.readLine();
+
+            if(response != null)
+                return response;
+
+            reader.close();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     private static void processPackages() {
@@ -86,42 +136,18 @@ public class Main {
     }
 
     private static boolean disablePackage(String packageName) {
-        Runtime runtime = Runtime.getRuntime();
-
         String[] command = {"adb", "shell", "pm", "disable-user", "--user", "0", packageName};
+        String response = runCommand(command);
 
-        try {
-            Process process = runtime.exec(command);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String response = reader.readLine();
-
-            if(response != null && response.equals(String.format("Package %s new state: disabled-user", packageName)))
-                return true;
-
-            reader.close();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        return false;
+        return response != null &&
+                response.equals(String.format("Package %s new state: disabled-user", packageName));
     }
 
     private static boolean removePackage(String packageName) {
-        Runtime runtime = Runtime.getRuntime();
-
         String[] command = {"adb", "shell", "pm", "uninstall", "-k", "--user", "0", packageName};
+        String response = runCommand(command);
 
-        try {
-            Process process = runtime.exec(command);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String response = reader.readLine();
-
-            if(response.equals("Success"))
-                return true;
-
-            reader.close();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        return false;
+        return response != null &&
+                response.equals("Success");
     }
 }
