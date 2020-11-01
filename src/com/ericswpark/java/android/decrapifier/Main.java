@@ -9,7 +9,7 @@ public class Main {
 
     private static final String DELIMITER = ",";
 
-    private static ArrayList<AndroidPackage> androidPackages = new ArrayList<>();
+    private static final ArrayList<AndroidPackage> androidPackages = new ArrayList<>();
     private static Scanner scanner;
 
     public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class Main {
         try (FileReader fileReader = new FileReader(filename);
              BufferedReader bufferedReader = new BufferedReader(fileReader)){
 
-            String line = "";
+            String line;
             // Skip CSV 1st line
             bufferedReader.readLine();
 
@@ -109,7 +109,7 @@ public class Main {
             int failure = 0;
 
             for (AndroidPackage androidPackage : androidPackages) {
-                boolean result = false;
+                boolean result;
                 if (!androidPackage.isForceDelete()) {
                     result = disablePackage(androidPackage.getPackageIdentifier());
                 } else {
