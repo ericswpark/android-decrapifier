@@ -1,0 +1,8 @@
+Package Identifier,Force Delete,Description
+com.android.providers.partnerbookmarks,false,Samsung Chrome Bookmarks (cannot be removed)
+com.samsung.android.app.settings.bixby,false,Bixby Settings
+com.samsung.systemui.bixby2,false,Bixby-related service
+com.samsung.android.bixby.service,false,Bixby-related service
+com.samsung.android.bixby.agent,false,Bixby agent
+com.samsung.android.bixby.wakeup,false,Bixby wake-up (Hotword detection)
+com.samsung.android.bixby.agent.dummy,false,Bixby agent dummy
