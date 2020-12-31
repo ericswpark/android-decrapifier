@@ -20,6 +20,8 @@ Refer to the example package lists in `example/`. There are a couple of pre-made
 
 Force delete means the package should be removed, not disabled. It is best to leave this as false, unless your device re-enables those packages periodically. If this happens, set the force deletion option to true.
 
+Finally, to see the raw ADB commands and responses sent back and forth, use the `-v` argument to enable verbose mode.
+
 ## FAQ
 
 ### Q: How do I re-enable packages?
