@@ -105,8 +105,13 @@ public class Main {
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String response = reader.readLine();
 
-            if(response != null)
+            if(response != null) {
+                if (verbose) {
+                    System.out.println("|-->| " + commandArrayToString(command));
+                    System.out.println("|<--| " + response);
+                }
                 return response;
+            }
 
             reader.close();
         } catch(Exception e) {
