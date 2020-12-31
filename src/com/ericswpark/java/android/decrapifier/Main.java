@@ -12,21 +12,37 @@ public class Main {
     private static final ArrayList<AndroidPackage> androidPackages = new ArrayList<>();
     private static Scanner scanner;
 
+    private static boolean verbose = false;
+    private static boolean auto = false;
+
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
         String packageListFile = null;
 
-        if (args.length == 0) {
-            System.out.print("What package list would you like to use? (format: codename.csv) ");
-            packageListFile = scanner.nextLine();
-        } else {
-            if (args[0].equals("-a")) {
-                // Try automatic detection
-                packageListFile = autoDetectDevice();
-            } else {
+        if (args.length != 0) {
+            ArrayList<String> arguments = new ArrayList<>();
+            Collections.addAll(arguments, args);
+
+            // Parse arguments
+            if (arguments.contains("-v")) {
+                verbose = true;
+                arguments.remove("-v");
+            }
+            if (arguments.contains("-a")) {
+                auto = true;
+                arguments.remove("-a");
+            }
+            if (!arguments.isEmpty()){
                 System.out.println("Invalid arguments.");
                 System.exit(1);
             }
+        }
+
+        if (auto) {
+            packageListFile = autoDetectDevice();
+        } else {
+            System.out.print("What package list would you like to use? (format: codename.csv) ");
+            packageListFile = scanner.nextLine();
         }
 
         Objects.requireNonNull(packageListFile);
