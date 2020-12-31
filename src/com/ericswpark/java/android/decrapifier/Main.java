@@ -99,6 +99,15 @@ public class Main {
         return null;
     }
 
+    private static String commandArrayToString(String[] command) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < command.length; i++) {
+            stringBuilder.append(command[i]);
+            stringBuilder.append(" ");
+        }
+        return stringBuilder.toString();
+    }
+
     private static void processPackages() {
         // Ask before starting
         System.out.printf("Found %d packages to disable/remove. Start? (y/n) ", androidPackages.size());
