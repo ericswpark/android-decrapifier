@@ -6,13 +6,13 @@ Thanks to XDA and Reddit users that found the ADB remove/disable commands!
 
 ## Usage
 
-[Download the latest release](https://github.com/ericswpark/android-decrapifier/releases) and run:
+[Download the latest release](https://github.com/ericswpark/android-decrapifier/releases/latest/download/android-decrapifier.jar) and run:
 
-    java -jar android_decrapifier.jar
+    java -jar android-decrapifier.jar
 
 Or, use auto-run (must be run at the root of this repository):
 
-    java -jar android_decrapifier.jar -a
+    java -jar android-decrapifier.jar -a
 
 Auto-run will grab the device information using ADB and then try and find the corresponding bloatware list from the example directory. If it does not exist it will throw an error and exit. For auto-run to succeed, you should clone the entire repo instead of just downloading the JAR file.
 
