@@ -127,8 +127,8 @@ public class Main {
 
     private static String commandArrayToString(String[] command) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < command.length; i++) {
-            stringBuilder.append(command[i]);
+        for (String s : command) {
+            stringBuilder.append(s);
             stringBuilder.append(" ");
         }
         return stringBuilder.toString();
