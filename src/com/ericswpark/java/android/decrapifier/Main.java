@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
-        String packageListFile = null;
+        String packageListFile;
 
         if (args.length != 0) {
             ArrayList<String> arguments = new ArrayList<>();
