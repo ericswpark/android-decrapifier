@@ -99,7 +99,7 @@ public class Main {
 
         System.out.printf("Detected device %s/%s.%n", manufacturer, codename);
 
-        return String.format("example/%s/%s.csv", manufacturer, codename);
+        return String.format("list/%s/%s.csv", manufacturer, codename);
     }
 
     private static String runCommand(String[] command) {
