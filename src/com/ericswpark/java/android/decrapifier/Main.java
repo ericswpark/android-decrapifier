@@ -88,7 +88,7 @@ public class Main {
         String[] command = {"adb", "shell", "getprop", "ro.product.brand"};
         String manufacturer = runCommand(command);
         if (manufacturer == null) {
-            throw new ADBException("No devices detected.");
+            throw new ADBException("No devices detected. Make sure ADB is enabled in Developer Options.");
         }
 
         // Get device codename
