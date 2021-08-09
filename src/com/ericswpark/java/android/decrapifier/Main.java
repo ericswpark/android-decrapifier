@@ -90,7 +90,6 @@ public class Main {
         if (manufacturer == null) {
             throw new ADBException("No devices detected.");
         }
-        Objects.requireNonNull(manufacturer);
 
         // Get device codename
         // Both ro.product.device and ro.product.name return the codename
