@@ -37,7 +37,12 @@ public class Main {
         }
 
         if (auto) {
-            packageListFile = autoDetectDevice();
+            try {
+                packageListFile = autoDetectDevice();
+            } catch (ADBException adbException) {
+                System.out.println(adbException.getMessage());
+                return;
+            }
         } else {
             System.out.print("What package list would you like to use? (format: codename.csv) ");
             packageListFile = scanner.nextLine();
@@ -76,12 +81,15 @@ public class Main {
         }
     }
 
-    private static String autoDetectDevice() {
+    private static String autoDetectDevice() throws ADBException {
         System.out.println("Detecting device using ADB...");
 
         // Get device manufacturer
         String[] command = {"adb", "shell", "getprop", "ro.product.brand"};
         String manufacturer = runCommand(command);
+        if (manufacturer == null) {
+            throw new ADBException("No devices detected.");
+        }
         Objects.requireNonNull(manufacturer);
 
         // Get device codename
