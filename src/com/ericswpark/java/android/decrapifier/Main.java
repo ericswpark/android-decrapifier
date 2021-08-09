@@ -138,7 +138,7 @@ public class Main {
         // Ask before starting
         System.out.printf("Found %d packages to disable/remove. Start? (y/n) ", androidPackages.size());
         String startConfirm = scanner.nextLine();
-        if(startConfirm.toUpperCase().equals("Y")) {
+        if(startConfirm.equalsIgnoreCase("Y")) {
             // Start deletion process
             int success = 0;
             int failure = 0;
