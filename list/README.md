@@ -1,7 +1,18 @@
-Here is a collection of pre-populated list of applications for each device.
+# Creating a new list
 
-There is no specific criteria - I just included the apps that I thought were bloatware, like Tripadvisor or Evernote or Facebook, for example. Discontinued apps, like Samsung ChatOn or Google Plus, are also included (even though Google Plus came back as Google Currents that's only for work and as far as I know no company uses it, so it was also included for disabling/removing). If you disagree with my app choices, you are always welcome to make your own! This is just a quick reference point for anyone who just wants to get bloatware off of their device, fast.
+Please keep the following in mind when creating a new list:
+- Test on the latest firmware available for a given device
+- Do not include apps that can be disabled/deleted from the application manager.
+- Do not include apps that do not come installed by default, _unless_ a system stub app installs the application after
+  initial setup.
 
-Please do not include apps that can be disabled from the application manager.
 
-When creating lists for pull requests, please create lists on the **latest, factory-reset firmware** on your particular device.
+# Supported devices
+
+- Samsung
+  - Galaxy Note 3 (SKT, hlteskt)
+  - Galaxy Note 3 Neo (KT, frescoltektt)
+  - Galaxy J5 (2015, j5ltekx)
+  - Galaxy S8 Plus (KT, dream2lteks)
+  - Galaxy Note 20 Ultra 5G (c2q)
+  - Galaxy Tab A 10.1 (2016, gtaxlltekx)
