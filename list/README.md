@@ -9,7 +9,9 @@ Please keep the following in mind when creating a new list:
 
 # Supported devices
 
-- Samsung
+- LG (lge)
+  - Q9 (LGU+, falcon)
+- Samsung (samsung)
   - Galaxy Note 3 (SKT, hlteskt)
   - Galaxy Note 3 Neo (KT, frescoltektt)
   - Galaxy J5 (2015, j5ltekx)
