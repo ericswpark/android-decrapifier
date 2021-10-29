@@ -1,4 +1,5 @@
 Package Identifier,Force Delete,Description
 com.lguplus.mobile.cs,false,LG U+ customer service app
+com.lguplus.tsmproxy,false,LG U+ USIM app
 com.facebook.system,false,Facebook bloat
 com.facebook.appmanager,false,Facebook bloat
