@@ -62,6 +62,11 @@ public class Main {
             bufferedReader.readLine();
 
             while ((line = bufferedReader.readLine()) != null) {
+                // Check if line is empty, skip if it is
+                if (line.trim().isEmpty()) {
+                    continue;
+                }
+
                 String[] rawInput = line.split(DELIMITER);
 
                 if(rawInput.length > 0) {
