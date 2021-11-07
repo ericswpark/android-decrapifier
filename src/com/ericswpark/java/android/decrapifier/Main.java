@@ -69,10 +69,13 @@ public class Main {
 
                 String[] rawInput = line.split(DELIMITER);
 
-                if(rawInput.length > 0) {
+                if(rawInput.length == 3) {
                     AndroidPackage androidPackage = new AndroidPackage(rawInput[0], Boolean.parseBoolean(rawInput[1]),
                             rawInput[2]);
                     androidPackages.add(androidPackage);
+                } else {
+                    System.out.println("Skipped potentially malformed line: " + line);
+                    System.out.println("Please check the list file for any formatting problems.");
                 }
             }
         } catch (FileNotFoundException fileNotFoundException) {
