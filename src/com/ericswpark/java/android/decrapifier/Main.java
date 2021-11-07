@@ -127,6 +127,10 @@ public class Main {
             }
 
             reader.close();
+        } catch (IOException ioException) {
+            if (ioException.getMessage().contains("error=2")) {
+                System.out.println("Error: adb was not found.");
+            }
         } catch(Exception e) {
             e.printStackTrace();
         }
