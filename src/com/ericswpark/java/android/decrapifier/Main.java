@@ -14,6 +14,11 @@ public class Main {
     private static boolean auto = false;
 
     public static void main(String[] args) {
+        if (!checkADBInstalled()) {
+            System.out.println("Error: Failed ADB install check.");
+            exit(1);
+        }
+
         scanner = new Scanner(System.in);
         String packageListFile;
 
@@ -193,6 +198,13 @@ public class Main {
 
         return response != null &&
                 response.equals("Success");
+    }
+
+    private static boolean checkADBInstalled() {
+        String[] command = {"adb", "--version"};
+        String response = runCommand(command);
+
+        return response != null && response.contains("Android Debug Bridge");
     }
 
     private static void exit(int statusCode) {
