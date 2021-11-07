@@ -167,7 +167,7 @@ public class Main {
                     System.out.printf("%s - successfully disabled/removed!%n", androidPackage.getPackageIdentifier());
                     success++;
                 } else {
-                    System.out.printf("%s - failed to disable/remove. It may be deleted/disabled already.%n",
+                    System.out.printf("%s - failed to disable/remove. It may have been deleted/disabled already.%n",
                             androidPackage.getPackageIdentifier());
                     failure++;
                 }
