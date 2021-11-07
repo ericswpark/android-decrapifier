@@ -80,12 +80,10 @@ public class Main {
             }
         } catch (FileNotFoundException fileNotFoundException) {
             System.out.println("Error: the specified package list file does not exist!");
-            System.out.println("The program will now exit.");
-            System.exit(1);
+            exit(1);
         } catch (IOException ioException) {
             System.out.println("Error: the file could not be read.");
-            System.out.println("The program will now exit.");
-            System.exit(1);
+            exit(1);
         }
     }
 
@@ -177,8 +175,7 @@ public class Main {
                     failure, androidPackages.size());
         } else {
             System.out.println("OK, deletion canceled.");
-            System.out.println("The program will now exit.");
-            System.exit(0);
+            exit(0);
         }
     }
 
@@ -196,5 +193,10 @@ public class Main {
 
         return response != null &&
                 response.equals("Success");
+    }
+
+    private static void exit(int statusCode) {
+        System.out.println("The program will now exit.");
+        System.exit(statusCode);
     }
 }
