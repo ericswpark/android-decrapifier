@@ -35,3 +35,5 @@ Please keep the following in mind when creating a new list:
   - Galaxy S8 Plus (KT, dream2lteks)
   - Galaxy Note 20 Ultra 5G (c2q)
   - Galaxy Tab A 10.1 (2016, gtaxlltekx)
+- Vivo (vivo)
+  - Y93 (V1818CA, PD1818B)

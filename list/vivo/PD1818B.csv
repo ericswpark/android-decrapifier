@@ -1,0 +1,18 @@
+Package Identifier,Force Delete,Description
+com.vivo.space,false,vivo.com application
+com.bbk.appstore,false,V-Appstore
+com.vivo.Tips,false,Tips application
+com.vivo.magazine,false,Lockscreen app
+com.vivo.assistant,false,Jovi
+com.vivo.agent,false,Jovi assistant
+com.vivo.vtouch,false,Jovi Vision
+com.iqoo.secure,false,iManager app (security crap)
+com.vivo.game,false,GameCenter clone
+com.mobile.iroaming,false,Data Store app (for roaming)
+com.bbk.cloud,false,Vivo Cloud app
+com.android.VideoPlayer,false,Android Video Player (crappified by Vivo)
+com.vivo.wallet,false,Vivo Wallet app
+com.chaozh.iReader,false,Reader app
+com.bbk.theme,false,iTheme app
+com.android.bbkmusic,false,iMusic app
+com.vivo.email,false,Vivo Email app
